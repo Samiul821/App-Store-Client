@@ -1,0 +1,186 @@
+[
+  {
+    "id": "app001",
+    "name": "TaskMaster",
+    "developer": "ProdTech Solutions",
+    "thumbnail": "https://i.ibb.co/3mhY8zP/taskmaster-thumb.jpg",
+    "banner": "https://i.ibb.co/Fq9QXkF/taskmaster-banner.jpg",
+    "downloads": 1500000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "description": "TaskMaster is your ultimate to-do list and task management app for increased productivity.",
+    "features": [
+      "Smart task reminders",
+      "Project collaboration",
+      "Cloud sync"
+    ],
+    "reviews": [
+      {
+        "user": "efficient_joe",
+        "rating": 5,
+        "comment": "Absolutely love this app! Keeps my tasks well organized."
+      }
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "MindSync",
+    "developer": "NeuroTech Inc.",
+    "thumbnail": "https://i.ibb.co/ZHkKghk/mindsync-thumb.jpg",
+    "banner": "https://i.ibb.co/1Ls5Df1/mindsync-banner.jpg",
+    "downloads": 2300000,
+    "category": "Health & Fitness",
+    "rating": 4.8,
+    "description": "MindSync helps you improve focus and reduce stress through guided mindfulness exercises.",
+    "features": [
+      "Personalized meditation plans",
+      "Daily mental health check-ins",
+      "Focus-boosting music"
+    ],
+    "reviews": [
+      {
+        "user": "calm_mia",
+        "rating": 5,
+        "comment": "This app has really helped me stay calm and focused throughout the day."
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "CodeCraft",
+    "developer": "EduSoft Ltd.",
+    "thumbnail": "https://i.ibb.co/n6yM4Ys/codecraft-thumb.jpg",
+    "banner": "https://i.ibb.co/98p1Vgg/codecraft-banner.jpg",
+    "downloads": 1800000,
+    "category": "Education",
+    "rating": 4.9,
+    "description": "CodeCraft is a fun and interactive coding platform for beginners and advanced learners.",
+    "features": [
+      "Step-by-step coding tutorials",
+      "Live coding challenges",
+      "AI-powered coding assistant"
+    ],
+    "reviews": [
+      {
+        "user": "dev_nick",
+        "rating": 5,
+        "comment": "Hands down, the best coding app! Very interactive and well-structured."
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "HabitForge",
+    "developer": "LifeTrack Apps",
+    "thumbnail": "https://i.ibb.co/K7mVf6h/habitforge-thumb.jpg",
+    "banner": "https://i.ibb.co/yVGQW5X/habitforge-banner.jpg",
+    "downloads": 1200000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "description": "HabitForge helps you build and track habits for a better and more productive life.",
+    "features": [
+      "Custom habit tracker",
+      "Progress analytics",
+      "Daily motivational tips"
+    ],
+    "reviews": [
+      {
+        "user": "growth_sarah",
+        "rating": 4,
+        "comment": "Great for habit tracking, but could use more customization options."
+      }
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "FitLife",
+    "developer": "HealthFirst Inc.",
+    "thumbnail": "https://i.ibb.co/R0fT8Fx/fitlife-thumb.jpg",
+    "banner": "https://i.ibb.co/sC5jFP1/fitlife-banner.jpg",
+    "downloads": 2900000,
+    "category": "Health & Fitness",
+    "rating": 4.7,
+    "description": "FitLife provides workout routines, meal plans, and health tracking for a fit lifestyle.",
+    "features": [
+      "AI-based workout plans",
+      "Diet and calorie tracking",
+      "Personalized health insights"
+    ],
+    "reviews": [
+      {
+        "user": "healthy_rob",
+        "rating": 5,
+        "comment": "Really effective! Love the customized meal and workout plans."
+      }
+    ]
+  },
+  {
+    "id": "app006",
+    "name": "BrainBoost",
+    "developer": "SmartLearn",
+    "thumbnail": "https://i.ibb.co/mzTNK3K/brainboost-thumb.jpg",
+    "banner": "https://i.ibb.co/MhMNf1P/brainboost-banner.jpg",
+    "downloads": 3100000,
+    "category": "Education",
+    "rating": 4.8,
+    "description": "BrainBoost enhances your memory, cognitive skills, and learning ability through fun exercises.",
+    "features": [
+      "Memory training games",
+      "Brain teasers & quizzes",
+      "AI-powered learning assistant"
+    ],
+    "reviews": [
+      {
+        "user": "thinker_jane",
+        "rating": 5,
+        "comment": "Excellent brain-training exercises! I feel sharper every day."
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "NoteZen",
+    "developer": "ProdHub",
+    "thumbnail": "https://i.ibb.co/qM0HTdP/notezen-thumb.jpg",
+    "banner": "https://i.ibb.co/NsrqNV5/notezen-banner.jpg",
+    "downloads": 1600000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "description": "NoteZen is a sleek, intuitive note-taking app with cloud storage and organization tools.",
+    "features": [
+      "AI-powered note suggestions",
+      "Sync across devices",
+      "Handwriting recognition"
+    ],
+    "reviews": [
+      {
+        "user": "notetaker_sam",
+        "rating": 4,
+        "comment": "Great app, but I wish it had a dark mode option."
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "WellnessPro",
+    "developer": "FitMind Solutions",
+    "thumbnail": "https://i.ibb.co/fMGy5F5/wellnesspro-thumb.jpg",
+    "banner": "https://i.ibb.co/DLhJhKm/wellnesspro-banner.jpg",
+    "downloads": 2200000,
+    "category": "Health & Fitness",
+    "rating": 4.9,
+    "description": "WellnessPro offers yoga, mindfulness, and personalized wellness routines for a balanced life.",
+    "features": [
+      "Guided yoga sessions",
+      "Daily stress-relief tips",
+      "Personalized wellness plans"
+    ],
+    "reviews": [
+      {
+        "user": "zen_master",
+        "rating": 5,
+        "comment": "This app has helped me achieve a stress-free and healthy lifestyle."
+      }
+    ]
+  }
+]
