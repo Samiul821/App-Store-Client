@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm lg:px-6">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,29 +28,23 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/apps">Apps</NavLink>
             </li>
             <li>
-                <NavLink to="/apps">Apps</NavLink>
-            </li>
-            <li>
-              <NavLink to="/myProfile">MyProfile</NavLink>
+              <NavLink to="/myProfile">My Profile</NavLink>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">AppStore</a>
+        <NavLink to="/apps" className="btn btn-ghost text-xl">AppStore</NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-        <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-                <NavLink to="/apps">Apps</NavLink>
-            </li>
-            <li>
-              <NavLink to="/myProfile">MyProfile</NavLink>
-            </li>
+        <ul className="menu menu-horizontal px-1 space-x-6">
+          <li>
+            <NavLink className={'text-lg font-semibold'} to="/apps">Apps</NavLink>
+          </li>
+          <li>
+            <NavLink className={'text-lg font-semibold'} to="/myProfile">My Profile</NavLink>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">
