@@ -6,24 +6,28 @@ import AppDetailsCard from "../components/AppDetailsCard";
 
 const AppsDetails = () => {
   const data = useLoaderData();
-  const {id} = useParams();
+  const { id } = useParams();
   const [apss, setApss] = useState({});
 
-//   console.log(data,id,apss);
+  //   console.log(data,id,apss);
 
   useEffect(() => {
-    const appsDetails = data.find(singleApp => singleApp.id == id)
-    setApss(appsDetails) 
-  }, [data,id])
+    const appsDetails = data.find((singleApp) => singleApp.id == id);
+    setApss(appsDetails);
+  }, [data, id]);
 
   return (
     <div>
       <header>
         <Navbar></Navbar>
       </header>
-      <main className="min-h-[calc(100vh-285px)] w-11/12 lg:w-10/12 mx-auto my-6">
-        <h2 className="text-center text-2xl font-semibold mb-5">Apps Details</h2>
-        <AppDetailsCard apps={apss}></AppDetailsCard>
+      <main className="min-h-[calc(100vh-285px)] w-11/12 lg:w-10/12 mx-auto my-6 flex justify-center">
+        <div>
+          <h2 className="text-center text-2xl font-semibold mb-5">
+            Apps Details
+          </h2>
+          <AppDetailsCard apps={apss}></AppDetailsCard>
+        </div>
       </main>
       <Footer></Footer>
     </div>
