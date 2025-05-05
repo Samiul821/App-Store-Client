@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Educational = ({ educationalApps }) => {
-  const { thumbnail, name, rating, downloads } = educationalApps;
+  const { id, thumbnail, name, rating, downloads } = educationalApps;
 
   return (
-    <div className="card bg-base-100 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm mx-auto">
+    <div
+    
+      className="card bg-base-100 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm mx-auto"
+    >
       <figure className="px-4 pt-4">
         <img
           src={thumbnail}
@@ -20,6 +24,9 @@ const Educational = ({ educationalApps }) => {
         <p className="text-sm text-gray-600">
           📥 Downloads: {downloads.toLocaleString()}
         </p>
+        <Link to={`/apps-details/${id}`} className={"btn btn-primary"}>
+          Details
+        </Link>
       </div>
     </div>
   );

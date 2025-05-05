@@ -9,6 +9,8 @@ import Loading from '../pages/Loading';
 import AuthLayout from '../layouts/AuthLayout';
 import Login from '../pages/Login';
 import SignUp from '../pages/SignUp';
+import PrivateRoute from '../provider/PrivateRoute';
+import AppsDetails from '../pages/AppsDetails';
 
 const router = createBrowserRouter([
     {
@@ -46,6 +48,16 @@ const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             }
         ]           
+    },
+    {
+        path: "apps-details/:id",
+        element: (
+            <PrivateRoute>
+                <AppsDetails></AppsDetails>
+            </PrivateRoute>
+        ),
+        loader: () => fetch("/apps.json"),
+        hydrateFallbackElement: <Loading></Loading>
     }
 ])
 

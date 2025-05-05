@@ -1,13 +1,15 @@
 import React, { use, useRef } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { loginUser, forgetPassword,googleSignIn } = use(AuthContext);
+  const { loginUser, forgetPassword, googleSignIn } = use(AuthContext);
 
   const navigate = useNavigate();
   const emailRef = useRef();
+  const location = useLocation();
+  console.log(location);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,7 +20,7 @@ const Login = () => {
     loginUser(email, password)
       .then((result) => {
         const user = result.user;
-        navigate("/");
+        navigate(`${location.state ? location.state : "/"}`);
         toast.success("Login Successfull.");
       })
       .catch((error) => {
@@ -41,15 +43,18 @@ const Login = () => {
 
   const handleGoogleSignIn = () => {
     googleSignIn()
-    .then(result => {
-      const user = result.user;
-      toast.success("Google Sign In Successfull")
-    })
-    .catch((error) => {
-      const errorMessage = error.message;
-      toast.error(errorMessage)
-    })
-  }
+      .then((result) => {
+        const user = result.user;
+        const redirectPath = location?.state?.from?.pathname || "/";
+        navigate(redirectPath, { replace: true });
+        toast.success("Google Sign In Successful");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        toast.error(errorMessage);
+      });
+  };
+  
 
   return (
     <div className="flex justify-center min-h-screen items-center">
@@ -69,7 +74,8 @@ const Login = () => {
           </Link>
         </p>
         <div className="my-6 space-y-4">
-          <button onClick={handleGoogleSignIn}
+          <button
+            onClick={handleGoogleSignIn}
             aria-label="Login with Google"
             type="button"
             className="hover:bg-violet-600 hover:text-white cursor-pointer flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600"

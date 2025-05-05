@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Trending = ({ trendingApps }) => {
-  const { thumbnail, name, rating, downloads } = trendingApps;
+  const {id, thumbnail, name, rating, downloads } = trendingApps;
 
   return (
     <div className="card bg-base-100 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm mx-auto">
@@ -20,6 +21,7 @@ const Trending = ({ trendingApps }) => {
         <p className="text-sm text-gray-600">
           📥 Downloads: {downloads.toLocaleString()}
         </p>
+        <Link to={`/apps-details/${id}`} className={'btn btn-primary'}>Details</Link>
       </div>
     </div>
   );
