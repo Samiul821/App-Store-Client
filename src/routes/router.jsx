@@ -6,6 +6,9 @@ import Error from '../pages/Error';
 import Apps from '../pages/Apps';
 import MyProfile from '../pages/MyProfile';
 import Loading from '../pages/Loading';
+import AuthLayout from '../layouts/AuthLayout';
+import Login from '../pages/Login';
+import SignUp from '../pages/SignUp';
 
 const router = createBrowserRouter([
     {
@@ -28,6 +31,21 @@ const router = createBrowserRouter([
                 element: <MyProfile></MyProfile>
             }
         ]
+    },
+    {
+        path: "/auth",
+        element: <AuthLayout></AuthLayout>,
+        errorElement: <Error></Error>,
+        children: [
+            {
+                path:"/auth/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/auth/signUp",
+                element: <SignUp></SignUp>
+            }
+        ]           
     }
 ])
 

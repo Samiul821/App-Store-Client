@@ -182,5 +182,189 @@
         "comment": "This app has helped me achieve a stress-free and healthy lifestyle."
       }
     ]
+  },
+  {
+    "id": "app009",
+    "name": "FocusTrack",
+    "developer": "NeuroEdge Ltd.",
+    "thumbnail": "https://i.ibb.co/yYxZfNS/focustrack-thumb.jpg",
+    "banner": "https://i.ibb.co/FHHD9c7/focustrack-banner.jpg",
+    "downloads": 2000000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "description": "FocusTrack helps you stay productive with Pomodoro timers and distraction blockers.",
+    "features": [
+      "Pomodoro timer",
+      "Website blocker",
+      "Productivity analytics"
+    ],
+    "reviews": [
+      {
+        "user": "focus_guru",
+        "rating": 5,
+        "comment": "Game changer for deep work! Pomodoro + blocker combo is amazing."
+      }
+    ]
+  },
+  {
+    "id": "app010",
+    "name": "SleepEase",
+    "developer": "RestWell Co.",
+    "thumbnail": "https://i.ibb.co/hH2mDdV/sleepease-thumb.jpg",
+    "banner": "https://i.ibb.co/ScFgvQ0/sleepease-banner.jpg",
+    "downloads": 1700000,
+    "category": "Health",
+    "rating": 4.8,
+    "description": "SleepEase improves your sleep through relaxing sounds, sleep tracking, and bedtime coaching.",
+    "features": [
+      "Sleep sound library",
+      "Smart sleep tracker",
+      "Bedtime reminders"
+    ],
+    "reviews": [
+      {
+        "user": "dreamy_luke",
+        "rating": 5,
+        "comment": "I finally get quality sleep! The relaxing sounds are perfect."
+      }
+    ]
+  },
+  {
+    "id": "app011",
+    "name": "LangBridge",
+    "developer": "LinguaTech",
+    "thumbnail": "https://i.ibb.co/3ycCmTH/langbridge-thumb.jpg",
+    "banner": "https://i.ibb.co/7SLj9ZJ/langbridge-banner.jpg",
+    "downloads": 1400000,
+    "category": "Education",
+    "rating": 4.7,
+    "description": "LangBridge helps you master new languages with interactive lessons and conversation practice.",
+    "features": [
+      "Interactive lessons",
+      "Speech recognition",
+      "Daily vocabulary goals"
+    ],
+    "reviews": [
+      {
+        "user": "polyglot_nina",
+        "rating": 5,
+        "comment": "Learning Spanish has never been this fun and easy!"
+      }
+    ]
+  },
+  {
+    "id": "app012",
+    "name": "MealMinder",
+    "developer": "NutriSmart",
+    "thumbnail": "https://i.ibb.co/NZXvVM4/mealminder-thumb.jpg",
+    "banner": "https://i.ibb.co/Y3rct1F/mealminder-banner.jpg",
+    "downloads": 1900000,
+    "category": "Health",
+    "rating": 4.5,
+    "description": "MealMinder keeps your nutrition in check with meal planning and healthy recipes.",
+    "features": [
+      "Custom meal plans",
+      "Macro tracking",
+      "Healthy recipe ideas"
+    ],
+    "reviews": [
+      {
+        "user": "foodie_karen",
+        "rating": 4,
+        "comment": "Very useful, just wish it had more vegetarian recipes."
+      }
+    ]
+  },
+  {
+    "id": "app013",
+    "name": "TimeStack",
+    "developer": "EfficiencyWorks",
+    "thumbnail": "https://i.ibb.co/2YvPZw7/timestack-thumb.jpg",
+    "banner": "https://i.ibb.co/NtKrzsK/timestack-banner.jpg",
+    "downloads": 1100000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "description": "TimeStack helps you plan your day with visual scheduling and time-blocking features.",
+    "features": [
+      "Drag-and-drop scheduler",
+      "Daily time blocks",
+      "Routine templates"
+    ],
+    "reviews": [
+      {
+        "user": "planner_mike",
+        "rating": 5,
+        "comment": "Love the visual schedule layout—keeps me on track all day."
+      }
+    ]
+  },
+  {
+    "id": "app014",
+    "name": "QuizRush",
+    "developer": "EdSpark Inc.",
+    "thumbnail": "https://i.ibb.co/JmZGKyG/quizrush-thumb.jpg",
+    "banner": "https://i.ibb.co/zXRYjkx/quizrush-banner.jpg",
+    "downloads": 2500000,
+    "category": "Education",
+    "rating": 4.9,
+    "description": "QuizRush makes learning fun with fast-paced quizzes across a wide range of subjects.",
+    "features": [
+      "Timed quiz battles",
+      "Leaderboard system",
+      "Topic-wise practice"
+    ],
+    "reviews": [
+      {
+        "user": "quiz_wizard",
+        "rating": 5,
+        "comment": "I’m addicted! Great for revision and learning on the go."
+      }
+    ]
+  },
+  {
+    "id": "app015",
+    "name": "ZenJournal",
+    "developer": "CalmSpace Ltd.",
+    "thumbnail": "https://i.ibb.co/TKpGbzz/zenjournal-thumb.jpg",
+    "banner": "https://i.ibb.co/3Yzj91D/zenjournal-banner.jpg",
+    "downloads": 900000,
+    "category": "Health",
+    "rating": 4.7,
+    "description": "ZenJournal encourages mindfulness and gratitude through daily journaling prompts.",
+    "features": [
+      "Mood tracking",
+      "Gratitude journal",
+      "Daily reflection prompts"
+    ],
+    "reviews": [
+      {
+        "user": "mindful_writer",
+        "rating": 5,
+        "comment": "Beautiful interface and truly calming experience!"
+      }
+    ]
+  },
+  {
+    "id": "app016",
+    "name": "SkillSpark",
+    "developer": "BrightMind Tech",
+    "thumbnail": "https://i.ibb.co/BzNPG3c/skillspark-thumb.jpg",
+    "banner": "https://i.ibb.co/zrWy3Z3/skillspark-banner.jpg",
+    "downloads": 2400000,
+    "category": "Education",
+    "rating": 4.8,
+    "description": "SkillSpark helps you learn new skills with video lessons, hands-on projects, and community support.",
+    "features": [
+      "Video-based lessons",
+      "Skill assessment quizzes",
+      "Project-based learning"
+    ],
+    "reviews": [
+      {
+        "user": "learner_ray",
+        "rating": 5,
+        "comment": "Very practical and engaging platform. I learned design basics easily!"
+      }
+    ]
   }
 ]

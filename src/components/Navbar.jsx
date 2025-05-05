@@ -1,7 +1,11 @@
-import React from "react";
-import { NavLink } from "react-router";
+import React, { use } from "react";
+import { Link, NavLink } from "react-router";
+import userImg from "../assets/user.png";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user } = use(AuthContext);
+
   return (
     <div className="navbar bg-base-100 shadow-sm lg:px-6">
       <div className="navbar-start">
@@ -35,20 +39,33 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <NavLink to="/apps" className="btn btn-ghost text-xl">AppStore</NavLink>
+        <NavLink to="/apps" className="btn btn-ghost text-xl">
+          AppStore
+        </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-6">
           <li>
-            <NavLink className={'text-lg font-semibold'} to="/apps">Apps</NavLink>
+            <NavLink className={"text-lg font-semibold"} to="/apps">
+              Apps
+            </NavLink>
           </li>
           <li>
-            <NavLink className={'text-lg font-semibold'} to="/myProfile">My Profile</NavLink>
+            <NavLink className={"text-lg font-semibold"} to="/myProfile">
+              My Profile
+            </NavLink>
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Login</a>
+      <div className="navbar-end space-x-2.5">
+        <img
+          className="w-10 h-10 rounded-full"
+          src={`${user ? user.photoURL : userImg}`}
+          alt=""
+        />
+        <Link to="/auth/login" className="btn">
+          Login
+        </Link>
       </div>
     </div>
   );
