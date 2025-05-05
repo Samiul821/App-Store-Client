@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signOut,
   updateProfile,
@@ -27,6 +28,10 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  const forgetPassword = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
+
   const logOut = () => {
     return signOut(auth);
   };
@@ -46,7 +51,8 @@ const AuthProvider = ({ children }) => {
     createUser,
     updateUser,
     loginUser,
-    logOut
+    logOut,
+    forgetPassword,
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };

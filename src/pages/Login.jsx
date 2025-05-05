@@ -1,12 +1,13 @@
-import React, { use } from "react";
+import React, { use, useRef } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { loginUser } = use(AuthContext);
+  const { loginUser, forgetPassword } = use(AuthContext);
 
   const navigate = useNavigate();
+  const emailRef = useRef();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -19,6 +20,18 @@ const Login = () => {
         const user = result.user;
         navigate("/");
         toast.success("Login Successfull.");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        toast.error(errorMessage);
+      });
+  };
+
+  const handleForgetPassword = () => {
+    const email = emailRef.current.value;
+    forgetPassword(email)
+      .then(() => {
+        toast.success("Password reset email sent!");
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -73,6 +86,7 @@ const Login = () => {
               <input
                 type="email"
                 name="email"
+                ref={emailRef}
                 placeholder="leroy@jenkins.com"
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
               />
@@ -82,13 +96,15 @@ const Login = () => {
                 <label htmlFor="password" className="text-sm">
                   Password
                 </label>
-                <a
-                  rel="noopener noreferrer"
-                  href="#"
-                  className="text-xs hover:underline dark:text-gray-600"
-                >
-                  Forgot password?
-                </a>
+                <div onClick={handleForgetPassword}>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="text-xs hover:underline dark:text-gray-600"
+                  >
+                    Forgot password?
+                  </a>
+                </div>
               </div>
               <input
                 type="password"
@@ -100,7 +116,7 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50"
+            className="cursor-pointer w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50"
           >
             Sign in
           </button>
