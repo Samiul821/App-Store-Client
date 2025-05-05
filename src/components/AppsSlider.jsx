@@ -25,8 +25,8 @@ const AppsSlider = () => {
         interval={3000}
       >
         {apps.map((app) => (
-          <div className="h-[400px] lg:h-[600px] bg-cover" key={app.id}>
-            <img src={app.banner} alt={app.name} />
+          <div key={app.id}>
+            <img className="h-[300px] md:h-[400px] lg:h-[600px]" src={app.banner} alt={app.name} />
             <div className="legend">
               <h3 className="text-xl font-bold">{app.name}</h3>
               <p>{app.description}</p>
