@@ -29,7 +29,6 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -57,12 +56,30 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-6">
           <li>
-            <NavLink className={"text-lg font-semibold"} to="/apps">
+            <NavLink
+              to="/apps"
+              className={({ isActive }) =>
+                `text-lg font-semibold px-3 py-1 rounded-md transition duration-200 ${
+                  isActive
+                    ? "text-blue-600 border-b-2 border-blue-600"
+                    : "text-gray-700 border-b-2 border-transparent hover:border-blue-400"
+                }`
+              }
+            >
               Apps
             </NavLink>
           </li>
           <li>
-            <NavLink className={"text-lg font-semibold"} to="/myProfile">
+            <NavLink
+              className={({ isActive }) =>
+                `text-lg font-semibold px-3 py-1 rounded-md transition duration-200 ${
+                  isActive
+                    ? "text-blue-600 border-b-2 border-blue-600"
+                    : "text-gray-700 border-b-2 border-transparent hover:border-blue-400"
+                }`
+              }
+              to="/myProfile"
+            >
               My Profile
             </NavLink>
           </li>

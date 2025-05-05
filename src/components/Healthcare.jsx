@@ -2,26 +2,31 @@ import React from "react";
 import { Link } from "react-router";
 
 const Healthcare = ({ healthApp }) => {
-  const {id, thumbnail, name, rating, downloads } = healthApp;
+  const { id, thumbnail, name, rating, downloads } = healthApp;
 
   return (
-    <div className="card bg-base-100 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm mx-auto">
+    <div className="card bg-base-100 shadow-lg border border-gray-200 hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm mx-auto rounded-2xl">
       <figure className="px-4 pt-4">
         <img
           src={thumbnail}
           alt={name}
-          className="rounded-xl w-[130px] h-[130px] object-cover"
+          className="rounded-full w-[130px] h-[130px] object-cover mx-auto shadow-lg"
         />
       </figure>
-      <div className="card-body items-center text-center space-y-2">
-        <h2 className="card-title text-lg font-semibold text-blue-600">
+      <div className="card-body items-center text-center space-y-4 p-6">
+        <h2 className="card-title text-xl font-bold text-indigo-600 hover:text-indigo-800 transition-all duration-300">
           {name}
         </h2>
-        <p className="text-sm text-gray-600">⭐ Rating: {rating}</p>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-700">⭐ Rating: {rating}</p>
+        <p className="text-sm text-gray-700">
           📥 Downloads: {downloads.toLocaleString()}
         </p>
-        <Link to={`/apps-details/${id}`} className={'btn btn-primary'}>Details</Link>
+        <Link
+          to={`/apps-details/${id}`}
+          className="btn btn-primary py-2 px-6 rounded-full text-white bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-indigo-600 hover:to-purple-500 transition-all duration-300"
+        >
+          View Details
+        </Link>
       </div>
     </div>
   );

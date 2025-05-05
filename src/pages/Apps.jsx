@@ -4,6 +4,8 @@ import Healthcare from "../components/Healthcare";
 import Productivity from "../components/Productivity";
 import Educational from "../components/Educational";
 import Trending from "../components/Trending";
+import AppsSlider from "../components/AppsSlider";
+import AppCard from "../components/AppCard";
 
 const Apps = () => {
   const data = useLoaderData();
@@ -12,6 +14,7 @@ const Apps = () => {
   const [productivityApps, setProductivityApps] = useState([]);
   const [educationalApps, setEducationalApps] = useState([]);
   const [trendingApps, setTrendingApps] = useState([]);
+  const [app, setApp] = useState([]);
 
   useEffect(() => {
     if (data && data.length > 0) {
@@ -31,8 +34,17 @@ const Apps = () => {
     }
   }, [data]);
 
+  useEffect(() => {
+    fetch("/appData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setApp(data);
+      });
+  }, []);
+
   return (
     <div className="space-y-5">
+      <AppsSlider></AppsSlider>
       {/* Trending Apps */}
       <section className="backdrop-blur-md bg-purple-100/30 border border-purple-300 shadow-md hover:shadow-lg transition-all duration-300 rounded-2xl p-6">
         <h2 className="text-2xl font-bold text-purple-700 mb-6 border-b border-purple-300 pb-2 flex items-center gap-2">
@@ -83,6 +95,17 @@ const Apps = () => {
               key={educationalApps.id}
               educationalApps={educationalApps}
             ></Educational>
+          ))}
+        </div>
+      </section>
+      {/* Entertainment  */}
+      <section className="backdrop-blur-md bg-pink-100/30 border border-pink-300 shadow-md hover:shadow-lg transition-all duration-300 rounded-2xl p-6">
+        <h2 className="text-2xl font-bold text-pink-700 mb-6 border-b border-pink-300 pb-2 flex items-center gap-2">
+          <span>🎬</span> Entertainment Apps
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {app.map((app) => (
+            <AppCard key={app.id} app={app}></AppCard>
           ))}
         </div>
       </section>

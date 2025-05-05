@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { toast } from "react-toastify";
 
 const AppsSlider = () => {
   const [apps, setApps] = useState([]);
@@ -12,7 +13,7 @@ const AppsSlider = () => {
         const latestApps = data.slice(0, 3);
         setApps(latestApps);
       })
-      .catch((err) => console.error("Failed to load apps:", err));
+      .catch((err) => toast.error("Failed to load apps:", err));
   }, []);
 
   return (

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Spotify",
+    "category": "Entertainment",
+    "rating": 4.7,
+    "developer": "Spotify AB",
+    "thumbnail": "https://i.ibb.co.com/HT7mf22N/download-15.jpg",
+    "description": "Music for everyone, anytime."
+  },
+  {
+    "id": 2,
+    "name": "Netflix",
+    "category": "Entertainment",
+    "rating": 4.8,
+    "developer": "Netflix, Inc.",
+    "thumbnail": "https://i.ibb.co.com/qMd6Mcth/download-16.jpg",
+    "description": "Unlimited movies and TV shows."
+  },
+  {
+    "id": 3,
+    "name": "YouTube",
+    "category": "Entertainment",
+    "rating": 4.5,
+    "developer": "Google LLC",
+    "thumbnail": "https://i.ibb.co.com/My0kkW59/images-1.png",
+    "description": "Watch and share videos worldwide."
+  },
+  {
+    "id": 4,
+    "name": "Instagram",
+    "category": "Social Media",
+    "rating": 4.6,
+    "developer": "Facebook, Inc.",
+    "thumbnail": "https://i.ibb.co.com/fdDKT40s/images-8.jpg",
+    "description": "Photo and video sharing social network."
+  },
+  {
+    "id": 5,
+    "name": "Facebook",
+    "category": "Social Media",
+    "rating": 4.2,
+    "developer": "Facebook, Inc.",
+    "thumbnail": "https://i.ibb.co.com/fzr81MFC/download-17.jpg",
+    "description": "Connect with friends and the world around you."
+  },
+  {
+    "id": 6,
+    "name": "Twitter",
+    "category": "Social Media",
+    "rating": 4.3,
+    "developer": "Twitter, Inc.",
+    "thumbnail": "https://i.ibb.co.com/h1WCyxj6/download-18.jpg",
+    "description": "Post your thoughts, pictures, and videos."
+  }
+]
