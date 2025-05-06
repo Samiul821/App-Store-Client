@@ -1,6 +1,5 @@
 import React, { use } from "react";
 import { Link, NavLink } from "react-router";
-import userImg from "../assets/user.png";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
@@ -108,12 +107,15 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end space-x-2.5">
-        <img
-          className="w-10 h-10 rounded-full"
-          src={`${user ? user.photoURL : userImg}`}
-          alt={user ? user.displayName : "userImg"}
-          title={user ? user.displayName : "User"}
-        />
+        {user && (
+          <img
+            className="w-10 h-10 rounded-full"
+            src={user.photoURL}
+            alt={user.displayName || "User"}
+            title={user.displayName || "User"}
+          />
+        )}
+
         {user ? (
           <button onClick={handleLogout} className="btn btn-primary px-8">
             Logout
