@@ -22,9 +22,8 @@ const MyProfile = () => {
       setMessage("Profile updated successfully!");
       toast.success("Profile updated successfully!");
     } catch (error) {
-      console.error(error);
       setMessage("Failed to update profile.");
-      toast.error("Failed to update profile.");
+      toast.error(error);
     }
   };
 

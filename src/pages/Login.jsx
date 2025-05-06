@@ -10,7 +10,6 @@ const Login = () => {
   const navigate = useNavigate();
   const emailRef = useRef();
   const location = useLocation();
-  console.log(location);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -55,11 +54,10 @@ const Login = () => {
         toast.error(errorMessage);
       });
   };
-  
 
   return (
     <div className="flex justify-center min-h-screen items-center">
-       <Helmet>
+      <Helmet>
         <title>Login | App Store</title>
       </Helmet>
       <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800">

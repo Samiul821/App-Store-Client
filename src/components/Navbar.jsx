@@ -13,12 +13,12 @@ const Navbar = () => {
         toast.success("Logout Successfull.");
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error);
       });
   };
 
   return (
-    <div className="navbar bg-base-100 shadow-sm lg:px-6">
+    <div className="navbar bg-base-100 shadow-sm lg:px-[100px]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -52,8 +52,13 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <NavLink to="/apps" className="btn btn-ghost text-xl">
-          AppStore
+        <NavLink
+          to="/apps"
+          className="text-2xl font-extrabold tracking-tight text-indigo-600 hover:text-indigo-800 transition duration-200"
+        >
+          <span className="bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
+            AppStore
+          </span>
         </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
