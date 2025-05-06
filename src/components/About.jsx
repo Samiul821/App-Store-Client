@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
@@ -9,6 +10,9 @@ const About = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
+       <Helmet>
+        <title>About Us | App Store</title>
+      </Helmet>
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold text-indigo-600 mb-4">About Us</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">

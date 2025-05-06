@@ -2,6 +2,7 @@ import React, { use, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { loginUser, forgetPassword, googleSignIn } = use(AuthContext);
@@ -58,6 +59,9 @@ const Login = () => {
 
   return (
     <div className="flex justify-center min-h-screen items-center">
+       <Helmet>
+        <title>Login | App Store</title>
+      </Helmet>
       <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800">
         <h2 className="mb-3 text-3xl font-semibold text-center">
           Login to your account

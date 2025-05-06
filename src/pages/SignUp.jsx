@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
   const { createUser, setUser, updateUser } = use(AuthContext);
@@ -48,7 +49,7 @@ const SignUp = () => {
             navigate("/");
           })
           .catch((error) => {
-            alert(error)
+            alert(error);
             setUser;
           });
         toast.success("Sign Up Successfull.");
@@ -61,6 +62,9 @@ const SignUp = () => {
 
   return (
     <div className="flex justify-center min-h-screen items-center">
+      <Helmet>
+        <title>Sign Up | App Store</title>
+      </Helmet>
       <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800">
         <h2 className="mb-6 text-3xl font-semibold text-center">
           Create a new account

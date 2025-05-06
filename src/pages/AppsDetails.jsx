@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useLoaderData, useParams } from "react-router";
 import AppDetailsCard from "../components/AppDetailsCard";
+import { Helmet } from "react-helmet-async";
 
 const AppsDetails = () => {
   const data = useLoaderData();
@@ -16,6 +17,9 @@ const AppsDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Details | App Store</title>
+      </Helmet>
       <header>
         <Navbar></Navbar>
       </header>

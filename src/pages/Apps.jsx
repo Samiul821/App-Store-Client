@@ -6,6 +6,7 @@ import Educational from "../components/Educational";
 import Trending from "../components/Trending";
 import AppsSlider from "../components/AppsSlider";
 import AppCard from "../components/AppCard";
+import { Helmet } from "react-helmet-async";
 
 const Apps = () => {
   const data = useLoaderData();
@@ -44,6 +45,9 @@ const Apps = () => {
 
   return (
     <div className="space-y-5">
+       <Helmet>
+        <title>Apps | App Store</title>
+      </Helmet>
       <AppsSlider></AppsSlider>
       {/* Trending Apps */}
       <section className="backdrop-blur-md bg-purple-100/30 border border-purple-300 shadow-md hover:shadow-lg transition-all duration-300 rounded-2xl p-6">

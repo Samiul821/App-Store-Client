@@ -8,11 +8,13 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thanks for contacting us!");
+    toast.success("Thanks for contacting us!");
   };
 
   return (
@@ -22,6 +24,9 @@ const Contact = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
+       <Helmet>
+        <title>Contact Us | App Store</title>
+      </Helmet>
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-indigo-600 mb-4">Contact Us</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -81,6 +86,7 @@ const Contact = () => {
             <label className="label font-semibold">Name</label>
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
               className="input input-bordered"
               required
@@ -91,6 +97,7 @@ const Contact = () => {
             <label className="label font-semibold">Email</label>
             <input
               type="email"
+              name="email"
               placeholder="your@email.com"
               className="input input-bordered"
               required

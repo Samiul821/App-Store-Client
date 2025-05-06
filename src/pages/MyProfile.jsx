@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const MyProfile = () => {
   const { user } = use(AuthContext);
@@ -33,6 +34,9 @@ const MyProfile = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Helmet>
+        <title>Profile | App Store</title>
+      </Helmet>
       <div className="max-w-md mx-auto mt-10 p-6 bg-base-100 shadow-xl rounded-xl">
         <h2 className="text-3xl font-bold text-center mb-6">My Profile</h2>
 
