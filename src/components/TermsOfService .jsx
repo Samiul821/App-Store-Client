@@ -1,8 +1,12 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const TermsOfService = () => {
   return (
     <div className="max-w-4xl mx-auto px-6 py-12 text-gray-800">
+      <Helmet>
+        <title>Terms | App Store</title>
+      </Helmet>
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-indigo-600 text-center">
         Terms of Service
       </h1>
