@@ -45,7 +45,13 @@ App Store BD is designed to practice and showcase front-end development skills u
 
 ## 📁 Project Structure
 
-
+src/
+├── assets/ # Static files (images, icons)
+├── components/ # Reusable UI components
+├── pages/ # All main pages
+├── routes/ # Route configuration
+├── App.jsx
+└── main.jsx
 
 ---
 
