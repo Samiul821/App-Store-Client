@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const AppDetailsCard = ({ apps }) => {
   const [reviewText, setReviewText] = useState("");
@@ -11,7 +12,7 @@ const AppDetailsCard = ({ apps }) => {
   const handleSubmit = () => {
     const numericRating = Number(rating);
     if (!reviewText || numericRating < 1 || numericRating > 5) {
-      alert("Please enter a review and a rating between 1 and 5.");
+      toast.error("Please enter a review and a rating between 1 and 5.");
       return;
     }
 
