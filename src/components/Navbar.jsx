@@ -47,6 +47,9 @@ const Navbar = () => {
             <li>
               <NavLink to="/myProfile">My Profile</NavLink>
             </li>
+            <li>
+              <NavLink to="/about">About Us</NavLink>
+            </li>
           </ul>
         </div>
         <NavLink to="/apps" className="btn btn-ghost text-xl">
@@ -81,6 +84,20 @@ const Navbar = () => {
               to="/myProfile"
             >
               My Profile
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                `text-lg font-semibold px-3 py-1 rounded-md transition duration-200 ${
+                  isActive
+                    ? "text-blue-600 border-b-2 border-blue-600"
+                    : "text-gray-700 border-b-2 border-transparent hover:border-blue-400"
+                }`
+              }
+              to="/about"
+            >
+              About Us
             </NavLink>
           </li>
         </ul>

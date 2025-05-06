@@ -32,9 +32,9 @@ const AppDetailsCard = ({ apps }) => {
   return (
     <motion.div
       className="max-w-4xl bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-500 border mx-auto"
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: 1.02 }}
+      transition={{ duration: 0.5 }}
     >
       <div className="flex flex-col lg:gap-5 lg:flex-row p-5">
         {/* Left Side */}
